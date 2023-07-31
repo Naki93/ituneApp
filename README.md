@@ -1,7 +1,7 @@
 ## iTunes Store Search App
 The iTunes Store Search App allows users to search for different types of media, such as movies, music, podcasts, and more, using the iTunes Search API. Users can also add their favorite media items to a favorites list.
 
-https://64c3916f70fca6559502785c--flourishing-blini-5bbe10.netlify.app/
+https://search-app-hkc9.onrender.com/
 
 ### How to Use the App
 Search for Media Content:
