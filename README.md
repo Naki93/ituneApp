@@ -1,70 +1,125 @@
-# Getting Started with Create React App
+## iTunes Store Search App
+The iTunes Store Search App allows users to search for different types of media, such as movies, music, podcasts, and more, using the iTunes Search API. Users can also add their favorite media items to a favorites list.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+https://64c3916f70fca6559502785c--flourishing-blini-5bbe10.netlify.app/
 
-## Available Scripts
+### How to Use the App
+Search for Media Content:
 
-In the project directory, you can run:
+Enter a search term in the search input field.
+Select the media type from the dropdown menu (e.g., movie, music, podcast, etc.).
+Click the "Search" button or press Enter to initiate the search.
+The search results will be displayed below the search form.
 
-### `npm start`
+Add Items to Favorites:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+After performing a search, the search results will be displayed in a list.
+Click the "Add to Favorites" button next to an item in the search results to add it to the favorites list.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+View Favorites List:
 
-### `npm test`
+The "Favorites" section below the search results displays the list of favorite items.
+Click the "Remove" button next to an item in the favorites list to remove it from the list.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Getting Started
+To run the application on your local machine, you don't need to clone the entire repository. Instead, you can directly use npm start to start the frontend and backend servers.
 
-### `npm run build`
+### Prerequisites
+Ensure that you have the following software installed on your machine:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Node.js (version 14 or higher)
+npm (Node.js package manager)
+Installation
+Install Backend Dependencies:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Install backend dependencies (skip if already installed)
+`npm install --prefix backend`
+Install Frontend Dependencies:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Install frontend dependencies (skip if already installed)
+`npm install --prefix frontend`
 
-### `npm run eject`
+### Running the App
+Start the Backend Server:
+### From the project root directory
+`npm start --prefix backend`
+The backend server will run on port 5000 by default. If you need to change the port, you can modify it in the index.js file inside the backend folder.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Start the Frontend Development Server:
+### From the project root directory
+`npm start --prefix frontend`
+The frontend server will run on port 3000 by default. If you need to change the port, you can modify it in the package.json file inside the frontend folder.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Open your Web Browser:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Once both the backend and frontend servers are running, open your web browser and visit http://localhost:3000 to access the application.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Testing
+The application comes with automated tests to ensure its functionality. To run the tests, use the following commands:
 
-## Learn More
+### Run Backend Tests:
+### From the project root directory
+`npm test --prefix backend`
+The tests use Jest and Supertest for testing the API endpoints.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Run Frontend Tests:
+### From the project root directory
+`npm test --prefix frontend`
+The tests use Jest and React Testing Library for testing the React components.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Security Measures
 
-### Code Splitting
+### env Files
+This app uses environment variables to manage sensitive information and configuration settings. The environment variables are stored in separate .env files for both the frontend and backend.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Backend .env File
+The backend .env file, located in the backend folder, contains configuration settings for the backend server, such as the server port and any API keys or secrets needed for external services.
 
-### Analyzing the Bundle Size
+For security reasons, the .env file is not included in the version control system (e.g., Git) to prevent sensitive information from being exposed publicly. Instead, it is added to the .gitignore file, so it won't be pushed to the repository.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+You can create your own .env file in the backend folder and include the necessary environment variables for your app. Here's an example of how it might look:
 
-### Making a Progressive Web App
+makefile (.env)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+PORT=5000
+API_KEY=my_secret_api_key
 
-### Advanced Configuration
+### Frontend .env File
+The frontend .env file, located in the frontend folder within my-search-app, contains configuration settings specific to the frontend, such as the API base URL.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Similar to the backend, the frontend .env file is also not included in version control to protect sensitive information.
 
-### Deployment
+Create your own .env file in the frontend folder and add the required environment variables. Here's an example:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+REACT_APP_API_BASE_URL=http://localhost:5000/api
+Using Environment Variables in the Code
+To use the environment variables in the code, we utilize a package called dotenv. It allows us to load the variables from the .env files into the app's environment.
 
-### `npm run build` fails to minify
+For the backend, we use dotenv in the index.js file to load the environment variables into the server. Here's an example of how it's done:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+require('dotenv').config(); // Load environment variables from .env file
+
+const port = process.env.PORT || 5000; // Use the PORT variable or fallback to 5000
+
+// ... rest of the server setup ...
+
+For the frontend, we use dotenv in the src/app.js file to load the environment variables into the React app. Here's an example:
+
+require('dotenv').config(); // Load environment variables from .env file
+
+const apiUrl = process.env.REACT_APP_API_BASE_URL; // Access the REACT_APP_API_BASE_URL variable
+
+// ... rest of the React app setup ...
+
+Error Handling:
+Proper error handling is implemented to handle and log errors securely without revealing sensitive information to the end-users.
+
+CORS and Helmet Middleware:
+
+The backend server uses CORS middleware to restrict cross-origin requests.
+The backend server uses Helmet middleware to set various HTTP headers, enhancing security.
+
+### Contributing
+Contributions to the iTunes Store Search App are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
+
+Happy searching! 🎶🎬📚

@@ -1,0 +1,34 @@
+/* FavoritesList.css */
+
+/* Style for each favorite item information */
+.item-info {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+  }
+  
+  /* Style for the item name */
+  .item-info h3 {
+    color: #1890ff;
+    margin-bottom: 5px;
+  }
+  
+  /* Style for other item information */
+  .item-info p {
+    margin-bottom: 3px;
+  }
+  
+  /* Style for the 'Remove' button */
+  .ant-btn {
+    background-color: #f5222d;
+    color: #fff;
+    border-color: #f5222d;
+  }
+  
+  /* Hover style for the button */
+  .ant-btn:hover {
+    background-color: #ff4d4f;
+    border-color: #ff4d4f;
+  }
+  

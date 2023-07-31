@@ -1,0 +1,38 @@
+/* ResultItem.css */
+
+/* Style for the item information */
+.item-info {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+  }
+  
+  /* Style for the card title (item name) */
+  .ant-card-head-title {
+    color: #1890ff;
+  }
+  
+  /* Style for the card cover image */
+  .ant-card-cover img {
+    width: 100px;
+  }
+  
+  /* Style for each item detail */
+  .item-info p {
+    margin-bottom: 5px;
+  }
+  
+  /* Style for the 'Add to Favorites' button */
+  .ant-btn {
+    background-color: #1890ff;
+    color: #fff;
+    border-color: #1890ff;
+  }
+  
+  /* Hover style for the button */
+  .ant-btn:hover {
+    background-color: #40a9ff;
+    border-color: #40a9ff;
+  }
+  

@@ -1,0 +1,36 @@
+/* SearchForm.css */
+
+/* Style for the form container */
+.search-form-container {
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+  
+  /* Style for the search input */
+  .ant-input {
+    width: 200px;
+    margin-right: 10px;
+  }
+  
+  /* Style for the media type select */
+  .ant-select {
+    width: 120px;
+    margin-right: 10px;
+  }
+  
+  /* Style for the search button */
+  .ant-btn-primary {
+    margin-right: 10px;
+  }
+  
+  /* Style for the clear button */
+  .clear-button {
+    color: #1890ff;
+    cursor: pointer;
+  }
+  
+  /* Custom style for the form layout */
+  .ant-form-item-label {
+    text-align: left;
+  }
+  
