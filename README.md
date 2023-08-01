@@ -1,7 +1,7 @@
 ## iTunes Store Search App
 The iTunes Store Search App allows users to search for different types of media, such as movies, music, podcasts, and more, using the iTunes Search API. Users can also add their favorite media items to a favorites list.
 
-https://64c3916f70fca6559502785c--flourishing-blini-5bbe10.netlify.app/
+https://search-app-hkc9.onrender.com/
 
 ### How to Use the App
 Search for Media Content:
@@ -21,6 +21,21 @@ View Favorites List:
 The "Favorites" section below the search results displays the list of favorite items.
 Click the "Remove" button next to an item in the favorites list to remove it from the list.
 
+### Download repository
+1. On GitHub.com, navigate to the main page of the repository.
+
+2. Above the list of files, click  Code.
+
+
+![code-button](https://github.com/Naki93/ituneApp/assets/135123469/e124c5ad-dd59-4e00-b1c4-d8cd3da51009)
+
+
+3. Select "Download ZIP" from the dropdown menu.
+
+  Once the ZIP file is downloaded, you can extract its contents to a directory of your choice. Inside the extracted directory, you 
+  should find the entire repository's contents.
+
+
 ### Getting Started
 To run the application on your local machine, you don't need to clone the entire repository. Instead, you can directly use npm start to start the frontend and backend servers.
 
@@ -32,11 +47,11 @@ npm (Node.js package manager)
 Installation
 Install Backend Dependencies:
 
-### Install backend dependencies (skip if already installed)
+### Install backend dependencies 
 `npm install --prefix backend`
 Install Frontend Dependencies:
 
-### Install frontend dependencies (skip if already installed)
+### Install frontend dependencies
 `npm install --prefix frontend`
 
 ### Running the App
@@ -92,24 +107,22 @@ Similar to the backend, the frontend .env file is also not included in version c
 Create your own .env file in the frontend folder and add the required environment variables. Here's an example:
 
 REACT_APP_API_BASE_URL=http://localhost:5000/api
-Using Environment Variables in the Code
+
+### Using Environment Variables in the Code
 To use the environment variables in the code, we utilize a package called dotenv. It allows us to load the variables from the .env files into the app's environment.
 
 For the backend, we use dotenv in the index.js file to load the environment variables into the server. Here's an example of how it's done:
 
-require('dotenv').config(); // Load environment variables from .env file
+`require('dotenv').config();` // Load environment variables from .env file
 
-const port = process.env.PORT || 5000; // Use the PORT variable or fallback to 5000
+`const port = process.env.PORT || 5000;` // Use the PORT variable or fallback to 5000
 
-// ... rest of the server setup ...
+
 
 For the frontend, we use dotenv in the src/app.js file to load the environment variables into the React app. Here's an example:
 
-require('dotenv').config(); // Load environment variables from .env file
+`const apiUrl = process.env.REACT_APP_API_BASE_URL;` // Access the REACT_APP_API_BASE_URL variable
 
-const apiUrl = process.env.REACT_APP_API_BASE_URL; // Access the REACT_APP_API_BASE_URL variable
-
-// ... rest of the React app setup ...
 
 Error Handling:
 Proper error handling is implemented to handle and log errors securely without revealing sensitive information to the end-users.
