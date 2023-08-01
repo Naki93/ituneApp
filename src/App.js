@@ -34,7 +34,7 @@ const App = () => {
       setSearchResults(data.results);
     } catch (error) {
       console.error('Error fetching data:', error);
-      // Handle error state if needed
+      // Handle error state 
     }
   };
 
@@ -56,7 +56,7 @@ const App = () => {
       setFavorites([...favorites, item]);
     } catch (error) {
       console.error('Error adding to favorites:', error);
-      // Handle error state if needed
+      // Handle error state
     }
   };
 
@@ -74,7 +74,7 @@ const App = () => {
       setFavorites(favorites.filter((item) => item.trackId !== id));
     } catch (error) {
       console.error('Error removing from favorites:', error);
-      // Handle error state if needed
+      // Handle error state 
     }
   };
 

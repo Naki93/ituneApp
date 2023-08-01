@@ -4,7 +4,7 @@ const helmet = require('helmet');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const fetch = require('isomorphic-fetch');
-const rateLimit = require('express-rate-limit');
+
 
 
 
@@ -18,15 +18,7 @@ app.use(cors());
 app.use(helmet());
 app.use(bodyParser.json());
 
-// Set rate limit for requests from the same IP address
-const limiter = rateLimit({
-  windowMs:  60 * 1000, // 15 minutes
-  max: 20, // 100 requests per windowMs
-});
-
-// Apply the rate limiter to all requests
-app.use(limiter);
-
+//Create a variable named favorites to store an open array
 let favorites = [];
 
 // Helper function to handle API requests
@@ -66,11 +58,7 @@ app.post('/api/favorites', (req, res) => {
   res.sendStatus(200);
 });
 
-// app.delete('/api/favorites/:id', (req, res) => {
-//   const id = req.params.id;
-//   favorites = favorites.filter((item) => item.trackId !== id);
-//   res.sendStatus(200);
-// });
+// Endpoint to delete favorite content
 app.delete('/api/favorites/:id', (req, res) => {
     const { id} = req.params;
     const indexToRemove = favorites.filter((item) => item.trackId == id);
