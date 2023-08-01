@@ -21,7 +21,7 @@ View Favorites List:
 The "Favorites" section below the search results displays the list of favorite items.
 Click the "Remove" button next to an item in the favorites list to remove it from the list.
 
-### Cloning a repository
+### Download repository
 1. On GitHub.com, navigate to the main page of the repository.
 
 2. Above the list of files, click  Code.
@@ -30,34 +30,11 @@ Click the "Remove" button next to an item in the favorites list to remove it fro
 ![code-button](https://github.com/Naki93/ituneApp/assets/135123469/e124c5ad-dd59-4e00-b1c4-d8cd3da51009)
 
 
-3. Copy the URL for the repository.
+3. Select "Download ZIP" from the dropdown menu.
 
-   To clone the repository using HTTPS, under "HTTPS", click .
+  Once the ZIP file is downloaded, you can extract its contents to a directory of your choice. Inside the extracted directory, you 
+  should find the entire repository's contents.
 
-   To clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority, click SSH, 
-   then click .
-
-   To clone a repository using GitHub CLI, click GitHub CLI, then click .
-
-
-
-![cli](https://github.com/Naki93/ituneApp/assets/135123469/3923f9a7-e8da-4a70-adef-42ef8d73546e)
-4. Open Git Bash
-
-5. Change the current working directory to the location where you want the cloned directory.
-
-6. Type ``git clone``, and then paste the URL you copied earlier.
-
-`git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY`
-
-7. Press Enter to create your local clone.
-
-``$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY``
-> Cloning into `Spoon-Knife`...
-> remote: Counting objects: 10, done.
-> remote: Compressing objects: 100% (8/8), done.
-> remove: Total 10 (delta 1), reused 10 (delta 1)
-> Unpacking objects: 100% (10/10), done.``
 
 ### Getting Started
 To run the application on your local machine, you don't need to clone the entire repository. Instead, you can directly use npm start to start the frontend and backend servers.
@@ -130,24 +107,22 @@ Similar to the backend, the frontend .env file is also not included in version c
 Create your own .env file in the frontend folder and add the required environment variables. Here's an example:
 
 REACT_APP_API_BASE_URL=http://localhost:5000/api
-Using Environment Variables in the Code
+
+### Using Environment Variables in the Code
 To use the environment variables in the code, we utilize a package called dotenv. It allows us to load the variables from the .env files into the app's environment.
 
 For the backend, we use dotenv in the index.js file to load the environment variables into the server. Here's an example of how it's done:
 
-require('dotenv').config(); // Load environment variables from .env file
+`require('dotenv').config();` // Load environment variables from .env file
 
-const port = process.env.PORT || 5000; // Use the PORT variable or fallback to 5000
+`const port = process.env.PORT || 5000;` // Use the PORT variable or fallback to 5000
 
-// ... rest of the server setup ...
+
 
 For the frontend, we use dotenv in the src/app.js file to load the environment variables into the React app. Here's an example:
 
-require('dotenv').config(); // Load environment variables from .env file
+`const apiUrl = process.env.REACT_APP_API_BASE_URL;` // Access the REACT_APP_API_BASE_URL variable
 
-const apiUrl = process.env.REACT_APP_API_BASE_URL; // Access the REACT_APP_API_BASE_URL variable
-
-// ... rest of the React app setup ...
 
 Error Handling:
 Proper error handling is implemented to handle and log errors securely without revealing sensitive information to the end-users.
