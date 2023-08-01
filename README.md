@@ -47,11 +47,11 @@ npm (Node.js package manager)
 Installation
 Install Backend Dependencies:
 
-### Install backend dependencies (skip if already installed)
+### Install backend dependencies 
 `npm install --prefix backend`
 Install Frontend Dependencies:
 
-### Install frontend dependencies (skip if already installed)
+### Install frontend dependencies
 `npm install --prefix frontend`
 
 ### Running the App
